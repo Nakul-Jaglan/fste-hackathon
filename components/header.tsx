@@ -25,7 +25,7 @@ const Header = () => {
   const downloadReport = () => {
     // Create a link to download the PDF
     const link = document.createElement("a")
-    link.href = "/reports/systems-thinking-hackathon-report.pdf"
+    link.href = "/report.pdf"
     link.download = "Systems-Thinking-Hackathon-Report.pdf"
     document.body.appendChild(link)
     link.click()
