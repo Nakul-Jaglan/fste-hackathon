@@ -14,7 +14,7 @@ const teamMembers = [
     role: "TBD",
     enrollmentNo: "2401010289",
     email: "nakul.2024@nst.rishihood.edu.in",
-    image: "/nakul.png?height=200&width=200",
+    image: "/Nakul.png?height=200&width=200",
   },
   {
     name: "Aaryan Yadav",
