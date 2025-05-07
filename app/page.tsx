@@ -14,35 +14,35 @@ const teamMembers = [
     role: "TBD",
     enrollmentNo: "2401010289",
     email: "nakul.2024@nst.rishihood.edu.in",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/nakul.png?height=200&width=200",
   },
   {
     name: "Aaryan Yadav",
     role: "TBD",
     enrollmentNo: "2401010011",
     email: "aaryan.yadav2024@nst.rishihood.edu.in",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/aaryan.jpeg?height=200&width=200",
   },
   {
     name: "Harshita Panwar",
     role: "TBD",
     enrollmentNo: "2403210006",
     email: "harshita.panwar2024@design.rishihood.edu.in",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/harshita.png?height=200&width=200",
   },
   {
     name: "Divyanshi Gupta",
     role: "TBD",
     enrollmentNo: "2404310005",
     email: "divyanshi.gupta2024@psy.rishihood.edu.in",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/divyanshi.jpg?height=200&width=200",
   },
   {
     name: "Shagun",
     role: "TBD",
     enrollmentNo: "4202130018",
     email: "shagun.2024@makers.rishihood.edu.in",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/shagun.png?height=200&width=200",
   },
 ]
 
@@ -55,7 +55,7 @@ const features = [
       <div className="w-12 h-12 rounded-full bg-[#A71930]/10 flex items-center justify-center text-[#A71930]">CLD</div>
     ),
     link: "/cld",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/cld-bg.webp?height=300&width=300",
   },
   {
     title: "BOT",
@@ -64,7 +64,7 @@ const features = [
       <div className="w-12 h-12 rounded-full bg-[#A71930]/10 flex items-center justify-center text-[#A71930]">BOT</div>
     ),
     link: "/bot",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/bot-bg.png?height=300&width=300",
   },
   {
     title: "SFD",
@@ -73,7 +73,7 @@ const features = [
       <div className="w-12 h-12 rounded-full bg-[#A71930]/10 flex items-center justify-center text-[#A71930]">SFD</div>
     ),
     link: "/sfd",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/sfd-bg.jpg?height=300&width=300",
   },
   {
     title: "Real-Time Pulse",
@@ -82,7 +82,7 @@ const features = [
       <div className="w-12 h-12 rounded-full bg-[#A71930]/10 flex items-center justify-center text-[#A71930]">RT</div>
     ),
     link: "/dashboard",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/rt-bg.png?height=300&width=300",
   },
 ]
 
@@ -221,7 +221,7 @@ export default function Home() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{member.name}</h3>
-                  <p className="text-[#A71930] text-sm mb-2">{member.role}</p>
+                  {/* <p className="text-[#A71930] text-sm mb-2">{member.role}</p> */}
                   <p className="text-gray-600 text-sm mb-1">ID: {member.enrollmentNo}</p>
                   <p className="text-gray-600 text-sm truncate">{member.email}</p>
                 </div>

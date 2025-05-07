@@ -12,11 +12,11 @@ export default function CLDPage() {
   const [zoomLevel, setZoomLevel] = useState(1)
 
   const zoomIn = () => {
-    setZoomLevel((prev) => Math.min(prev + 0.1, 2))
+    setZoomLevel((prev) => Math.min(prev + 0.25, 5))
   }
 
   const zoomOut = () => {
-    setZoomLevel((prev) => Math.max(prev - 0.1, 0.5))
+    setZoomLevel((prev) => Math.max(prev - 0.25, 0.5))
   }
 
   const resetZoom = () => {
@@ -26,7 +26,7 @@ export default function CLDPage() {
   const downloadModel = () => {
     // Create a link to download the MDL file
     const link = document.createElement("a")
-    link.href = "/models/causal-loop-diagram.mdl"
+    link.href = "/cld-model-107.mdl"
     link.download = "causal-loop-diagram.mdl"
     document.body.appendChild(link)
     link.click()
@@ -78,7 +78,7 @@ export default function CLDPage() {
                     className="w-full h-full flex items-center justify-center"
                   >
                     <Image
-                      src="/placeholder.svg?height=800&width=800"
+                      src="/cld.png?height=800&width=800"
                       alt="Causal Loop Diagram"
                       width={800}
                       height={800}
@@ -144,82 +144,73 @@ export default function CLDPage() {
                 <div className="space-y-6">
                   <div className="p-4 border rounded-lg bg-gray-50">
                     <h4 className="text-lg font-semibold text-[#A71930] mb-2">Reinforcing Loop 1: Air Travel Growth</h4>
+                    <p className="mb-2">Air travel → customer satisfaction → air travel perception → airways popularity → airline revenues → airline investments → air infrastructure → increased air travel.</p>
+                    <p className="text-sm text-gray-600">Strength: Strong, as it captures the self-perpetuating growth of air travel.</p>
+                  </div>
+
+                  <div className="p-4 border rounded-lg bg-gray-50">
+                    <h4 className="text-lg font-semibold text-[#A71930] mb-2">
+                      Balancing Loop 1: Rail System Balance
+                    </h4>
+                    <p className="mb-2">Rail usage → rail revenue → railway investments → rail infrastructure → accessibility → increased rail usage.</p>
+                    <p className="text-sm text-gray-600">
+                    Strength: Moderate, as it shows constraints on rail growth but lacks external pressures that could weaken it further.
+                    </p>
+                  </div>
+
+                  <div className="p-4 border rounded-lg bg-gray-50">
+                    <h4 className="text-lg font-semibold text-[#A71930] mb-2">Reinforcing Loop 2: Policy Driven Aviation</h4>
                     <p className="mb-2">
-                      Increased air travel demand → More flights and routes → Improved accessibility → Lower prices
-                      through competition → Further increased demand
+                    Infrastructure → policy support → airline investments → air infrastructure → Infrastructure.
                     </p>
                     <p className="text-sm text-gray-600">
-                      This loop explains how the initial boost in air travel (through schemes like UDAN) creates a
-                      self-reinforcing cycle of growth.
+                    Strength: Moderate, as it shows how policy support amplifies air infrastructure growth
                     </p>
                   </div>
 
                   <div className="p-4 border rounded-lg bg-gray-50">
                     <h4 className="text-lg font-semibold text-[#A71930] mb-2">
-                      Balancing Loop 1: Rail Capacity Constraints
+                      Balancing Loop 2: Eco Conscious Shift
                     </h4>
                     <p className="mb-2">
-                      Increased rail travel demand → Overcrowding → Reduced service quality → Shift to alternative
-                      transport → Decreased rail travel demand
+                    Carbon footprint awareness → (S) rail usage → (O) air travel → (S) carbon footprint awareness.
                     </p>
                     <p className="text-sm text-gray-600">
-                      This loop shows how capacity constraints in the railway system create a balancing effect that
-                      limits growth.
-                    </p>
-                  </div>
-
-                  <div className="p-4 border rounded-lg bg-gray-50">
-                    <h4 className="text-lg font-semibold text-[#A71930] mb-2">Reinforcing Loop 2: Rail Decline</h4>
-                    <p className="mb-2">
-                      Decreased rail usage → Reduced revenue → Less investment in improvements → Deteriorating service →
-                      Further decreased usage
+                    Increased carbon footprint awareness boosts rail usage ("S"), which reduces air travel ("O"), potentially increasing awareness further as emissions drop.
                     </p>
                     <p className="text-sm text-gray-600">
-                      This loop illustrates how initial declines in rail travel can accelerate through reduced
-                      investment and maintenance.
+                    Strength: Moderate, as environmental awareness is growing but currently outweighed by air travel’s convenience                    
                     </p>
                   </div>
 
                   <div className="p-4 border rounded-lg bg-gray-50">
                     <h4 className="text-lg font-semibold text-[#A71930] mb-2">
-                      Balancing Loop 2: Air Travel Constraints
+                    Reinforcing Loop 3: Model Competition
                     </h4>
                     <p className="mb-2">
-                      Increased air travel → Airport congestion → Delays and service issues → Reduced attractiveness →
-                      Stabilized demand
+                    Air travel → (O) rail usage → (S) rail revenue → (S) railway investments → (S) rail infrastructure → (S) accessibility → (S) rail usage.
                     </p>
                     <p className="text-sm text-gray-600">
-                      This loop demonstrates how growth in air travel eventually faces constraints that limit
-                      exponential growth.
+                    As air travel increases, rail usage decreases ("O" link), which reduces rail revenue, investments, and infrastructure, further decreasing rail usage. This reinforces air travel dominance.
                     </p>
+                    <p className="text-sm text-gray-600">Strength: Strong, as it captures the competitive dynamic directly.</p>
                   </div>
+
 
                   <div className="p-4 border rounded-lg bg-gray-50">
                     <h4 className="text-lg font-semibold text-[#A71930] mb-2">
-                      Balancing Loop 2: Air Travel Constraints
+                      Reinforcing Loop 4: Cost Feedback
                     </h4>
                     <p className="mb-2">
-                      Increased air travel → Airport congestion → Delays and service issues → Reduced attractiveness →
-                      Stabilized demand
+                    Air travel → (O) travel cost (air) → (S) air travel.
                     </p>
-                    <p className="text-sm text-gray-600">
-                      This loop demonstrates how growth in air travel eventually faces constraints that limit
-                      exponential growth.
-                    </p>
-                  </div>
-
-                  <div className="p-4 border rounded-lg bg-gray-50">
-                    <h4 className="text-lg font-semibold text-[#A71930] mb-2">
-                      Balancing Loop 2: Air Travel Constraints
-                    </h4>
                     <p className="mb-2">
-                      Increased air travel → Airport congestion → Delays and service issues → Reduced attractiveness →
-                      Stabilized demand
+                    Rail usage → (S) travel cost (rail) → (O) rail usage.
                     </p>
                     <p className="text-sm text-gray-600">
-                      This loop demonstrates how growth in air travel eventually faces constraints that limit
-                      exponential growth.
+                    Increased air travel reduces air travel costs due to competition ("O"), further boosting air travel ("S"). Conversely, low rail usage increases rail travel costs ("S") due to lack of economies of scale, reducing rail usage ("O").
                     </p>
+                    <p className="text-sm text-gray-600">Strength: Strong, as cost dynamics significantly influence travel mode choice.</p>
                   </div>
                 </div>
               </CardContent>

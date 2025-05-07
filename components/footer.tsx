@@ -65,15 +65,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-[#A71930]">Connect</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-[#A71930] transition-colors">
+              <a href="https://www.facebook.com" className="text-gray-600 hover:text-[#A71930] transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#A71930] transition-colors">
+              <a href="https://www.x.com" className="text-gray-600 hover:text-[#A71930] transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#A71930] transition-colors">
+              <a href="https://www.instagram.com" className="text-gray-600 hover:text-[#A71930] transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>

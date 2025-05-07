@@ -13,11 +13,11 @@ export default function SFDPage() {
   const [zoomLevel, setZoomLevel] = useState(1)
 
   const zoomIn = () => {
-    setZoomLevel((prev) => Math.min(prev + 0.1, 2))
+    setZoomLevel((prev) => Math.min(prev + 0.25, 5))
   }
 
   const zoomOut = () => {
-    setZoomLevel((prev) => Math.max(prev - 0.1, 0.5))
+    setZoomLevel((prev) => Math.max(prev - 0.25, 0.5))
   }
 
   const resetZoom = () => {
@@ -27,7 +27,7 @@ export default function SFDPage() {
   const downloadModel = () => {
     // Create a link to download the MDL file
     const link = document.createElement("a")
-    link.href = "/models/stock-flow-diagram.mdl"
+    link.href = "/sfd-model-107.mdl"
     link.download = "stock-flow-diagram.mdl"
     document.body.appendChild(link)
     link.click()
@@ -79,7 +79,7 @@ export default function SFDPage() {
                     className="w-full h-full flex items-center justify-center"
                   >
                     <Image
-                      src="/placeholder.svg?height=800&width=800"
+                      src="/sfd.jpeg?height=800&width=800"
                       alt="Stock and Flow Diagram"
                       width={800}
                       height={800}
